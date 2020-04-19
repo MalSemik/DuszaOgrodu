@@ -1,0 +1,111 @@
+body {
+
+    position: relative;
+}
+
+h2,
+h3,
+h4,
+p {
+
+    text-align: center;
+}
+
+h2,
+h3,
+h4 {
+    font-family: 'Dancing Script', cursive;
+    padding-top: 3vh;
+}
+
+p {
+    font-family: 'Work Sans', sans-serif;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav a {
+    font-family: 'Dancing Script', cursive;
+    color: #000;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.navbar-brand img {
+    height: 15vh;
+}
+
+
+header {
+    background-image: url(../img/roses-142876_1920.jpg);
+    height: 80vh;
+    width: 100vw;
+    background-size: cover;
+    position: relative;
+    background-position: -20vw;
+    background-repeat: no-repeat;
+
+}
+
+header h1 {
+    color: #fff;
+    line-height: 100vh;
+    text-align: center;
+    font-size: 90px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.logo img {
+    position: absolute;
+    top: 30%;
+    left: 23%;
+}
+
+
+.about {
+    text-align: center;
+}
+
+.why article {
+    min-height: 50vh;
+    background-color: rgb(255, 246, 253);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why img {
+    width: 25vh;
+    height: 25vh;
+    border-radius: 50%;
+    margin-bottom: 5vh;
+    margin-top: 2vh;
+
+}
+
+.offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.offer .card {
+    width: 80vw;
+    margin-bottom: 5vh;
+}
+
+footer {
+    height: 30vh;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    bottom: -30vh;
+    left: 0;
+    width: 100%;
+}
