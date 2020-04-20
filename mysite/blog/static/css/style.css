@@ -15,6 +15,11 @@ h2,
 h3,
 h4 {
     font-family: 'Dancing Script', cursive;
+
+}
+
+h2,
+h3 {
     padding-top: 3vh;
 }
 
@@ -41,6 +46,9 @@ nav a {
     height: 15vh;
 }
 
+.navbar {
+    opacity: 0.8;
+}
 
 header {
     background-image: url(../img/roses-142876_1920.jpg);
@@ -67,6 +75,23 @@ header h1 {
     left: 23%;
 }
 
+@media(min-width:1024px) {
+    header {
+        height: 120vh;
+        width: 100vw;
+        background-size: cover;
+        position: relative;
+        background-position: 0;
+        background-position-y: -40vh;
+        background-repeat: no-repeat;
+    }
+
+    .logo img {
+        width: 17vw;
+        top: 23%;
+        left: 40%;
+    }
+}
 
 .about {
     text-align: center;
@@ -93,11 +118,45 @@ header h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.offer .card-header a {
+    color: #fff;
+    font-size: 2rem;
+
+}
+
+.offer .card-header h4 {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .offer .card {
+    width: 90vw;
+    margin-bottom: 5vh;
+}
+
+.offer .card .rose {
     width: 80vw;
     margin-bottom: 5vh;
+}
+
+@media(min-width:1024px) {
+    .offer .card {
+        width: 90vw;
+        margin-bottom: 5vh;
+    }
+
+    p {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .offer .card .rose {
+        width: 18vw;
+        margin-bottom: 5vh;
+    }
 }
 
 footer {

@@ -1,5 +1,5 @@
 <!doctype html>
-{% load static %}
+<!-- {% load static %} -->
 <html lang="en">
 
 <head>
@@ -17,19 +17,19 @@
   <!-- Optional theme -->
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
 
-  {# MEDIUM STYLE EDITOR#}
+  <!-- {# MEDIUM STYLE EDITOR#} -->
   <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css"
     media="screen" charset="utf-8">
 
 
-  {# Custom CSS#}
+  <!-- {# Custom CSS#} -->
   <!-- <link rel="stylesheet" href="{% static 'css/blog.css' %}">
   <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
   <link rel="stylesheet" href="../../static/css/style.css">
 
 
-  {# Fonts#}
+  <!-- {# Fonts#} -->
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One&display=swap&subset=latin-ext"
     rel="stylesheet">
@@ -38,29 +38,36 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+  <nav id="main-nav" class="navbar navbar-expand-md navbar-light bg-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="../../static//img/logo.png" alt="Dusza Ogrodu"></a>
+      <a class="navbar-brand" href="#head"><img src="../../static//img/logo.png" alt="Dusza Ogrodu"></a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-item nav-link" href="#">O nas</a>
+            <a class="nav-item nav-link" href="#about">O nas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-item nav-link" href="#">Dlaczego róże?</a>
+            <a class="nav-item nav-link" href="#why">Dlaczego róże?</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-item nav-link" href="#">Oferta</a>
+          <li class="nav-item dropdown">
+            <a href="#offer" class="nav-link dropdown-toggle" data-toggle="dropdown">Oferta</a>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">Róże pnące</a>
+              <a href="#" class="dropdown-item">Róże parkowe</a>
+              <a href="#" class="dropdown-item">Róże wielokwiatowe</a>
+
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-item nav-link" href="{% url 'about' %}">Encyklopedia róż</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Kontakt</a>
+            <a class="nav-link" href="#contact">Kontakt</a>
           </li>
+
         </ul>
       </div>
     </div>
@@ -88,7 +95,7 @@
     </div>
   </nav> -->
 
-  <header>
+  <header id="head">
     <div class="logo">
       <img src="../../static//img/logo2.png" alt="Dusza Ogrodu">
     </div>
@@ -107,7 +114,7 @@
       wilgotnym torfem. Każda sadzonka posiada oryginalną etykietę.</p>
 
   </section>
-  <section class="why">
+  <section class="why" id="why">
     <h2>Dlaczego róże?</h2>
     <p>Powodów jest kilka:</p>
     <article class="coinsidence">
@@ -155,8 +162,93 @@
         po równo- tylko trzeba to chcieć zobaczyć w drugim człowieku .</p>
     </article>
   </section>
-  <section class="offer">
+
+  <section class="offer" id="offer">
     <h2>Nasza oferta</h2>
+
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header bg-success light">
+          <h4 href="#collapse1" data-parend="#accordion" data-toggle="collapse">
+            <a>
+              Róże pnące
+            </a>
+          </h4>
+        </div>
+
+        <div id="collapse1" class="collapse show">
+          <div class="card-body">
+            <p><strong>Róże pnące</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ea iste a
+              doloremque, cumque, debitis
+              eum vel ipsum architecto
+              aut, recusandae totam ullam aperiam. Nesciunt expedita officiis animi quam corporis optio inventore
+              facilis
+              sint
+              et nulla in, repellat debitis dolor at nisi quo, unde temporibus. Quos nisi nostrum officia, illo.</p>
+
+            <div class="card rose">
+              <img class="card-img-top" src="../../static/img/Giardina.png" alt="">
+              <div class="card-body">
+                <h4 class="card-title">Giardina</h4>
+                <p class="card-text">Długo, wśród różowych odmian pnących nie pojawiła się róża, która mogłaby dorównać
+                  Eden
+                  Rose. Dopiero w roku 2007 roku udało się w szkółce Tantau’a zarejestrować odmianę, która według mnie,
+                  pod
+                  pewnymi względami, przewyższa Eden Rose. Bardzo rzadko spotykany wśród nowoczesnych róż intensywny
+                  malinowy zapach, bardziej witalny pokrój krzewów oraz odporność na choroby i warunki atmosferyczne.
+                  Uzyskanie 5 gwiazdek, w pięciostopniowej skali, foruje tę odmianę.
+
+                  Giardina to odmiana pnąca 2.5 - 3 metrów. Rzeczywisty kształt i kolor kwiatu jak na zdjęciu.</p>
+                <p>Cena: 15,00 zł</p>
+                <a class="btn btn-success btn-block" href="https://allegro.pl/oferta/roza-pnaca-giardina-9133678432"
+                  target="_blank">Zamów</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header bg-success light">
+          <h4 href="#collapse2" data-parend="#accordion" data-toggle="collapse">
+            <a>
+              Collapse Two
+            </a>
+          </h4 data-parend="#accordion" data-toggle="collapse">
+        </div>
+
+        <div id="collapse2" class="collapse ">
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ea iste a doloremque, cumque, debitis
+            eum vel ipsum architecto
+            aut, recusandae totam ullam aperiam. Nesciunt expedita officiis animi quam corporis optio inventore facilis
+            sint
+            et nulla in, repellat debitis dolor at nisi quo, unde temporibus. Quos nisi nostrum officia, illo.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header bg-success light">
+          <h4 href="#collapse3" data-parend="#accordion" data-toggle="collapse">
+            <a>
+              Collapse Three
+            </a>
+          </h4>
+        </div>
+
+        <div id="collapse3" class="collapse ">
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ea iste a doloremque, cumque, debitis
+            eum vel ipsum architecto
+            aut, recusandae totam ullam aperiam. Nesciunt expedita officiis animi quam corporis optio inventore facilis
+            sint
+            et nulla in, repellat debitis dolor at nisi quo, unde temporibus. Quos nisi nostrum officia, illo.
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
     <div class="card">
       <img class="card-img-top" src="../../static/img/Screenshot_2020-04-19 Róża historyczna - Sidonie.png" alt="">
       <div class="card-body">
@@ -237,7 +329,7 @@
       </div>
     </div>
   </div> -->
-  <footer class="sticky-bottom">
+  <footer class="sticky-bottom" id="contact">
     <h2>Kontakt</h2>
     <p>Wacław Słaby</p>
     <p>Tel. 555-555-555</p>
@@ -245,17 +337,15 @@
 
   </footer>
   <!-- {# SCRIPTS#} -->
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
   </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
     integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
   </script>
-  <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
+  <script type="text/javascript" src="../../static/js/main.js"></script>
 </body>
 
 </html>
