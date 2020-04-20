@@ -18,7 +18,11 @@ h4 {
 
 }
 
-h2,
+h2 {
+    padding-top: 18vh;
+    padding-bottom: 5vh;
+}
+
 h3 {
     padding-top: 3vh;
 }
@@ -154,8 +158,14 @@ header h1 {
     }
 
     .offer .card .rose {
-        width: 18vw;
-        margin-bottom: 5vh;
+        width: 25%;
+        margin: 5vh;
+    }
+
+    .offer .group {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 }
 
@@ -167,4 +177,9 @@ footer {
     bottom: -30vh;
     left: 0;
     width: 100%;
+}
+
+footer h2 {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }

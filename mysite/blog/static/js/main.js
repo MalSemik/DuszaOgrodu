@@ -9,8 +9,12 @@ $('#main-nav a').on('click', function (event) {
 
         $('html, body').animate({
             scrollTop: $(hash).offset().top
-        }, 2000, function () {
+        }, 1800, function () {
             window.location.hash = hash;
         })
     }
 })
+
+$('.navbar-nav>li>a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
+});
